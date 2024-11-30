@@ -5,6 +5,6 @@ export default defineConfig({
   schema:'./src/database/schema.ts',
   out:'./src/database/drizzle',
   dbCredentials:{
-    url:'postgresql://postgres.jsvxonxpgrgqampqhdif:Mizuki9270@@@aws-0-ap-northeast-1.pooler.supabase.com:6543/postgres',
+    url:process.env.supabase_database_url!,
   }
 })
