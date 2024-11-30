@@ -5,7 +5,7 @@ import cors from "@elysiajs/cors";
 const app = new Elysia();
 
 app.use(cors({
-  origin:'http://localhost:4200'
+  origin:'*'
 }))
 
 app.get('/user/:id',async ({params:{id}}) => {
