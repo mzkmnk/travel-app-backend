@@ -15,6 +15,9 @@ app.get('/user/:id',async ({params:{id}}) => {
 });
 
 app.post('/user/create',async ({body}) =>{
+
+  console.log(body);
+
   const user = await UserQuery().create({data:{...body}})
 
   return {
